@@ -1,30 +1,36 @@
-# Diabetes_Prediction_ML_Project_2
-
-End-to-end supervised learning project that predicts whether a patient has diabetes using the Pima Indians Diabetes Dataset. This repo is a work-in-progress
-
-## 🎯 Goal
-
-Build a classifier that takes medical features (pregnancies, glucose, blood pressure, skin thickness, insulin, BMI, diabetes pedigree function, age) and predicts the `Outcome` (0 = non-diabetic, 1 = diabetic).
-
-## 📦 Dataset
-
-- **Source:** Pima Indians Diabetes Dataset [Kaggle]
-- **Samples:** 768
-- **Features:** 8 numeric medical attributes
-- **Target:** `Outcome` (binary: 0/1)
-
-## 🧠 Approach (so far)
-
-- **Model:** Support Vector Machine (SVM) classifier with linear kernel 
-- **Preprocessing:** Standardization using `StandardScaler`
-- **Split:** 80% train / 20% test with stratification on `Outcome`
-- **Metrics:** Accuracy on train and test sets
-
-### Current Results
-
-- Training accuracy: ~0.78–0.79
-- Test accuracy: ~0.76–0.78  
-*(Update with your exact numbers once you finalize the run.)*
 
 
+A machine learning model built with Python and Scikit-Learn that predicts whether a female patient is diabetic based on diagnostic medical measurements.
 
+---
+
+## 📌 Project Overview
+
+This project uses a Support Vector Classifier (`SVC`) with a linear kernel to perform binary classification on the Pima Indians Diabetes Dataset. It standardizes diagnostic metrics, trains a supervised learning model, evaluates performance, and provides a pipeline to test custom single-instance patient data.
+
+---
+
+## 📂 Features & Dataset Schema
+
+The model takes 8 clinical input parameters to predict the target outcome:
+
+| Feature Name | Description |
+| :--- | :--- |
+| **Pregnancies** | Number of times pregnant |
+| **Glucose** | Plasma glucose concentration (2 hours in an oral glucose tolerance test) |
+| **BloodPressure** | Diastolic blood pressure ($mm\ Hg$) |
+| **SkinThickness** | Triceps skin fold thickness ($mm$) |
+| **Insulin** | 2-Hour serum insulin ($\mu U/ml$) |
+| **BMI** | Body mass index ($weight\ in\ kg / (height\ in\ m)^2$) |
+| **DiabetesPedigreeFunction** | Diabetes pedigree function (genetic score) |
+| **Age** | Age in years |
+| **Outcome** *(Target)* | `0`: Non-diabetic, `1`: Diabetic |
+
+---
+
+## ⚙️ Prerequisites & Dependencies
+
+Ensure you have Python 3.8+ installed. Install the required libraries:
+
+```bash
+pip install numpy pandas scikit-learn
